@@ -1,12 +1,15 @@
 package com.morningstar.lossaversion.entity;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -37,4 +40,8 @@ public class User {
 	private LocalDateTime userUpdated;
 	@Column(nullable = true)
 	private boolean emailVerified;
+	
+	@OneToMany(targetEntity = UserPortfolio.class)
+	@JoinColumn(name = "user_id")
+	private List<UserPortfolio> userPortfolio;
 }
