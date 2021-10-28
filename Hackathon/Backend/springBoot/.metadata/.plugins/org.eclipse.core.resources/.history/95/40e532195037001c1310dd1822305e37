@@ -1,0 +1,23 @@
+package com.morningstar.lossaversion.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.morningstar.lossaversion.dto.ResponseDto;
+import com.morningstar.lossaversion.dto.UserDto;
+import com.morningstar.lossaversion.entity.User;
+
+@RestController
+public class UserController {
+	
+	@PostMapping("/register")
+	public ResponseEntity<ResponseDto> post(@RequestBody UserDto userDto ) {
+		User user = userService.register(userDto);
+		ResponseDto responseDto = new ResponseDto("Added succesfully",user);
+		return new ResponseEntity<ResponseDto>(responseDto,HttpStatus.OK);
+	}
+	
+}

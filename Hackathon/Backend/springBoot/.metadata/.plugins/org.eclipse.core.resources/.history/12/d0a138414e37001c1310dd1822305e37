@@ -1,0 +1,44 @@
+package com.morningstar.lossaversion.service;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.http.HttpStatus;
+
+import com.morningstar.lossaversion.dto.LoginDto;
+import com.morningstar.lossaversion.dto.UserDto;
+import com.morningstar.lossaversion.entity.User;
+
+import exception.FunDoNotesCutomException;
+
+public class UserService implements IUserService {
+	
+	@Override
+	public User register(UserDto userDto) {
+		User userEntity = new User();
+		BeanUtils.copyProperties(userDto, userEntity);
+		userEntity.setPassword(pec.pass().encode(userDto.getPassword()));
+		User user = userRepository.save(userEntity);
+		
+		String token = tokenService.createToken(user.getId(), new Date(System.currentTimeMillis() + (120*1000)) );
+		String body = "http://localhost:8081/verify/" + token;
+		Boolean isSent = emailSender.isEmailSent(userDto.getEmail(),"Nikhilmusale70@gmail.com", "Verification email", body);
+		if (!isSent) {
+			throw new FunDoNotesCutomException(HttpStatus.BAD_GATEWAY,"Email not sent");
+		}
+		
+		return user;
+	}
+	
+	@Override
+	public String login(LoginDto loginDto) {
+		User user = userRepository.findByEmail(loginDto.getEmail());
+		if (user == null) {
+			throw new FunDoNotesCutomException(HttpStatus.BAD_REQUEST,"Email-Id incorrect");
+		}
+		if (!(pec.pass().matches(loginDto.getPassword(), user.getPassword()))) {
+			throw new FunDoNotesCutomException(HttpStatus.BAD_REQUEST,"Password Incorrect");
+		}
+		
+		return tokenService.createToken(user.getId());
+		
+	}
+}

@@ -1,0 +1,10 @@
+package com.morningstar.lossaversion.service;
+
+import com.morningstar.lossaversion.dto.LoginDto;
+import com.morningstar.lossaversion.dto.UserDto;
+import com.morningstar.lossaversion.entity.User;
+
+public interface IUserService {
+	public User register(UserDto userDto);
+	public String login(LoginDto loginDto);
+}

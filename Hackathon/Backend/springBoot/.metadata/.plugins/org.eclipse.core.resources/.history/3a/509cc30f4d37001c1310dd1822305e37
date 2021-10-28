@@ -1,0 +1,5 @@
+package com.morningstar.lossaversion.dto;
+
+public class ResponseDto {
+
+}

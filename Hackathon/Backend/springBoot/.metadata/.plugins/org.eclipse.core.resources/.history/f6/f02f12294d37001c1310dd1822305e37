@@ -1,0 +1,5 @@
+package com.morningstar.lossaversion.service;
+
+public class UserService {
+
+}

@@ -1,0 +1,14 @@
+package com.morningstar.lossaversion.service;
+
+import org.springframework.stereotype.Service;
+
+import com.morningstar.lossaversion.dto.LoginDto;
+import com.morningstar.lossaversion.dto.UserDto;
+import com.morningstar.lossaversion.entity.User;
+
+@Service
+public interface IUserService {
+	public User register(UserDto userDto);
+	public String login(LoginDto loginDto);
+	
+}
