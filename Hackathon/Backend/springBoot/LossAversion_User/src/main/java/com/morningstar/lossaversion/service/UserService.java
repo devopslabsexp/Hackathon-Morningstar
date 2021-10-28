@@ -51,7 +51,7 @@ public class UserService implements IUserService {
 		String body = "http://localhost:8081/verify/" + token;
 		Boolean isSent = emailSender.isEmailSent(userDto.getEmail(),"Nikhilmusale70@gmail.com", "Verification email", body);
 		if (!isSent) {
-			throw new LossAversionCutomException(HttpStatus.BAD_GATEWAY,"Email not sent");
+			throw new LossAversionCutomException(HttpStatus.BAD_REQUEST,"Email not sent");
 		}
 		
 		return user;
@@ -88,7 +88,7 @@ public class UserService implements IUserService {
 		String body = token;
 		Boolean isSent = emailSender.isEmailSent(user.getEmail(),"Nikhilmusale70@gmail.com", "Reset Password email", body);
 		if (!isSent) {
-			throw new LossAversionCutomException(HttpStatus.BAD_GATEWAY,"Email not sent, for forgot password");
+			throw new LossAversionCutomException(HttpStatus.BAD_REQUEST,"Email not sent, for forgot password");
 		}
 	}
 
