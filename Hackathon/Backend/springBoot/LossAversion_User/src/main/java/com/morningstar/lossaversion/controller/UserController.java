@@ -35,7 +35,6 @@ public class UserController {
 		ResponseDto responseDto = new ResponseDto("Added succesfully",user);
 		return new ResponseEntity<ResponseDto>(responseDto,HttpStatus.OK);
 	}
-	
 
 	@GetMapping("/giveUser/{token}")
 	public User giveUser(@PathVariable("token") String token) {

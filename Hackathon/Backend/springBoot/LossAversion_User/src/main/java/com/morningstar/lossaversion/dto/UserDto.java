@@ -14,8 +14,6 @@ public class UserDto {
 	private String fname;
 	@NotNull(message = "Last name should not be blank")
 	private String lname;
-	@NotNull(message = "Phone Number should not be blank")
-	private String phoneNumber;	
 	@NotNull(message = "Email should not be blank")
 	private String email;
 	@NotNull(message = "Password should not be blank")

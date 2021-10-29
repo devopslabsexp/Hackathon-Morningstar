@@ -50,7 +50,7 @@ public class UserPortfolioService implements IUserPortfolioService {
 	public List<UserPortfolio> showingUserPortfolio(String token) {
 		User user = userRepository.findById(tokenService.decodeToken(token)).orElseThrow( 
 				() -> new LossAversionCutomException(HttpStatus.BAD_REQUEST, "User Not Found, for reseting password") );
-	
+		
 		return user.getUserPortfolio();
 	}
 	
