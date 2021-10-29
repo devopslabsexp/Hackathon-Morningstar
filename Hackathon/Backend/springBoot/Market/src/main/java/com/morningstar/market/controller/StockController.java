@@ -13,7 +13,7 @@ import com.morningstar.market.service.PnbInDB;
 import com.morningstar.market.service.TamoInDB;
 import com.morningstar.market.service.YeshBankInDB;
 
-@RestController
+@RestController("/market")
 public class StockController {
 	@Autowired
 	MrfInDB mrfInDB;

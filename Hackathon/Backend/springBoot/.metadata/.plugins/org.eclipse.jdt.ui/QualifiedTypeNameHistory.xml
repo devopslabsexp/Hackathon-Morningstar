@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="com.morningstar.lossaversion.repository.UserRepo"/>
     <fullyQualifiedTypeName name="com.morningstar.lossaversion.service.IUserPortfolioService"/>
     <fullyQualifiedTypeName name="java.util.stream.Collector"/>
@@ -33,31 +30,34 @@
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="com.morningstar.market.service.baseServiceCvToModel"/>
-    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="java.lang.Long"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
-    <fullyQualifiedTypeName name="com.morningstar.market.entity.Mrf"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="com.morningstar.market.repo.MrfRepo"/>
     <fullyQualifiedTypeName name="com.morningstar.market.service.BaseServiceCvToModel"/>
     <fullyQualifiedTypeName name="com.morningstar.market.dto.ResponseDto"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestHeader"/>
-    <fullyQualifiedTypeName name="com.morningstar.market.repo.PnbRepo"/>
-    <fullyQualifiedTypeName name="com.morningstar.market.repo.TamoRepo"/>
-    <fullyQualifiedTypeName name="com.morningstar.market.entity.Pnb"/>
-    <fullyQualifiedTypeName name="com.morningstar.market.entity.Tamo"/>
-    <fullyQualifiedTypeName name="com.morningstar.market.repo.YesBankRepo"/>
-    <fullyQualifiedTypeName name="com.morningstar.market.entity.YesBank"/>
     <fullyQualifiedTypeName name="com.morningstar.market.service.PnbInDB"/>
     <fullyQualifiedTypeName name="com.morningstar.market.service.TamoInDB"/>
     <fullyQualifiedTypeName name="com.morningstar.market.service.YeshBankInDB"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="com.morningstar.market.repo.MrfRepo"/>
+    <fullyQualifiedTypeName name="com.morningstar.market.repo.TamoRepo"/>
+    <fullyQualifiedTypeName name="com.morningstar.market.repo.YesBankRepo"/>
+    <fullyQualifiedTypeName name="com.morningstar.market.entity.Mrf"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestHeader"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.morningstar.market.entity.Pnb"/>
+    <fullyQualifiedTypeName name="com.morningstar.market.repo.PnbRepo"/>
+    <fullyQualifiedTypeName name="com.morningstar.market.entity.YesBank"/>
+    <fullyQualifiedTypeName name="com.morningstar.market.entity.Tamo"/>
 </qualifiedTypeNameHistroy>

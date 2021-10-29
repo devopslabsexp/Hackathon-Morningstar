@@ -28,20 +28,11 @@ public class UserPortfolioService implements IUserPortfolioService {
 	TokenService tokenService;
 	
 	public void addingUserPortfolio(UserPortfolioDto userPortfolioDto, String token) {
-		System.out.println("1");
 		User user = userRepository.findById(tokenService.decodeToken(token)).orElseThrow( 
 				() -> new LossAversionCutomException(HttpStatus.BAD_REQUEST, "User Not Found, for reseting password") );
-		System.out.println("2");
 		UserPortfolio userPortfolio = new UserPortfolio();
-		System.out.println("3");
 		BeanUtils.copyProperties(userPortfolioDto, userPortfolio);
-		System.out.println("4");
-		System.out.println();
-		
-		
-		
 		userPortfolioRepo.save(userPortfolio);
-		System.out.println("55");
 		user.getUserPortfolio().add(userPortfolio);
 		System.out.println(user.getFname() + " " + user.getUserPortfolio());
 		userRepository.save(user);
